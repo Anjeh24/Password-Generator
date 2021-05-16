@@ -10,7 +10,7 @@ var specialCharacters = "!'()*+,-./:;<=>?@[\]^_`{|}~#";
 function generatePassword() {
     var password = "";
     var passwordcharacters = "";
-}
+
 //Creating prompt to select length of password
 
 var passwordLength = prompt("How many charaters would you like your password to be? It has to be between 8 and 128 characters.");
@@ -18,14 +18,14 @@ passwordLength = parseInt(passwordLength);
 
 if (passwordLength < 8){
     alert("Password must be atleast 8 characters");
-    return "";
+    return null;
 }
 
 if (passwordLength > 128){
     alert("Password cannot be more than 128 characters");
-    return "";
+    return null;
 
-}
+}}
 
 
 //Choosing/confirming options with yes or no boolean for lowercase
