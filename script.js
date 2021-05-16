@@ -7,23 +7,29 @@ var lCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "0123456789";
 var specialCharacters = "!'()*+,-./:;<=>?@[\]^_`{|}~#";
 
+var password = "";
+var passwordcharacters = "";
+var passwordLength
+
+
 function generatePassword() {
-    var password = "";
-    var passwordcharacters = "";
+    
 
 //Creating prompt to select length of password
 
-var passwordLength = prompt("How many charaters would you like your password to be? It has to be between 8 and 128 characters.");
-passwordLength = parseInt(passwordLength);
+passwordLength = prompt("How many charaters would you like your password to be? It has to be between 8 and 128 characters.");
+ passwordLength = parseInt(passwordLength);
 
 if (passwordLength < 8){
     alert("Password must be atleast 8 characters");
-    return null;
+    return "";
+    
 }
+ 
 
 if (passwordLength > 128){
     alert("Password cannot be more than 128 characters");
-    return null;
+    return "";
 
 }}
 
@@ -60,7 +66,8 @@ if (specialSymbols) {
 }
 
 for (var i = 0; i < passwordLength; i++) {
-    password = passwordcharacters[Math.floor(Math.random) * passwordcharacters.length)]
+    password = passwordcharacters[Math.floor(Math.random) * passwordcharacters.length]
+    console.log(password)
 }
 
 
